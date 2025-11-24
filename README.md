@@ -1,7 +1,7 @@
 
-  # Pizza Delicious
+  # Saini Brick Oven Pizza Co
 
-  This is a code bundle for Pizza Delicious, Fresh Oven Baked Pizza. 
+  This is a code bundle for Saini Brick Oven Pizza Co. The original project is available at https://www.figma.com/design/du9es9rNvkxGth3LCdnWRO/Saini-Brick-Oven-Pizza-Co.
 
   ## Running the code
 
