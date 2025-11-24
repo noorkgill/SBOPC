@@ -1,7 +1,7 @@
 
-  # Saini Brick Oven Pizza Co
+  # Pizza Delicious
 
-  This is a code bundle for Saini Brick Oven Pizza Co. 
+  This is a code bundle for Pizza Delicious, Fresh Oven Baked Pizza. 
 
   ## Running the code
 
