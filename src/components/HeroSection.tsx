@@ -1,10 +1,10 @@
-import basilImg from "figma:asset/3e8ab6eb01edbfb850d1c5a41aa04aac02cef32b.png";
-import mushroomImg from "figma:asset/0c54bcd0ac63e98c8a9cb35cf74b6a88ceb38c06.png";
-import oliveImg from "figma:asset/dd1090d318f2bc1f065bd2cb0d9bae3fb92e3c89.png";
-import tomatoImg from "figma:asset/bc9ebf3b2a5af3d3cd86f0a27b6bac6a28dbba2e.png";
-import pepperImg from "figma:asset/b8be1a9fd4ac1f2f5becc9f8c2c00be065e4f2c5.png";
-import garlicImg from "figma:asset/3b22c34d81db4e8f13d41e68e3ab4b29056e5dd0.png";
 import pizzaHeroImg from "figma:asset/72c59f35ef69ea03aab63c086b15fb4f31b01bb4.png";
+import greenPepper from "figma:asset/413903c1259d87e235dc40c814692e8b67a7e0fa.png";
+import tomato from "figma:asset/c79b80ee37c86494cca10cb77e5c7c7a52930106.png";
+import onion from "figma:asset/3871de02491f80f88e233d6062ec267d3660915d.png";
+import olive from "figma:asset/00dfeb91fd1ab12b3270bcbd70e53f799f28bd62.png";
+import mushroom from "figma:asset/566a7d39d0d8d5ccd5d8d69ee6665d51e1f50a73.png";
+import basil from "figma:asset/b822ecc2bd24f00c2266a31c7e8fd9c974c5ccf3.png";
 
 export function HeroSection() {
   const scrollToMenu = () => {
@@ -18,97 +18,77 @@ export function HeroSection() {
     <section className="relative bg-gradient-to-b from-gray-50 to-white py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
-          <h1 className="mb-6">Your Pizza Party Starts Here!</h1>
-          <p className="max-w-2xl mx-auto mb-8 text-gray-600">
-            Gather your friends and family and enjoy the best pizza in town. Freshly made and delivered hot!
+          <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '72px', fontWeight: '700', color: '#C8102E', lineHeight: '1.1', letterSpacing: '2px' }} className="mb-6">
+            Your Pizza Party Starts Here!
+          </h1>
+          <p className="max-w-2xl mx-auto mb-8" style={{ color: '#000000', fontWeight: '700', fontSize: '20px', lineHeight: '1.6' }}>
+            Gather your friends and family and enjoy the best pizza in town, where classic pizza meets Indian flavor.
           </p>
-          <button 
-            onClick={scrollToMenu}
-            className="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition-colors"
-          >
-            View Our Menu
-          </button>
         </div>
       </div>
       
       {/* Floating ingredients */}
-      <div className="absolute top-16 left-10 w-20 h-20 animate-float">
+      <div className="absolute top-12 left-[5%] w-32 h-32 animate-float">
         <img 
-          src={basilImg}
-          alt="Basil" 
+          src={greenPepper}
+          alt="Green Pepper" 
           className="w-full h-full object-contain drop-shadow-lg"
         />
       </div>
-      <div className="absolute top-12 left-[18%] w-24 h-24 animate-float-delayed">
+      <div className="absolute top-8 right-[8%] w-28 h-28 animate-float-delayed">
         <img 
-          src={mushroomImg}
-          alt="Mushroom" 
-          className="w-full h-full object-contain drop-shadow-lg"
-        />
-      </div>
-      <div className="absolute top-10 right-[20%] w-20 h-20 animate-float">
-        <img 
-          src={oliveImg}
-          alt="Olive" 
-          className="w-full h-full object-contain drop-shadow-lg"
-        />
-      </div>
-      <div className="absolute top-16 right-10 w-24 h-24 animate-float-delayed">
-        <img 
-          src={tomatoImg}
+          src={tomato}
           alt="Tomato" 
           className="w-full h-full object-contain drop-shadow-lg"
         />
       </div>
-      <div className="absolute top-[45%] left-8 w-20 h-20 animate-float">
+      <div className="absolute top-[50%] left-[3%] w-24 h-24 animate-float">
         <img 
-          src={oliveImg}
+          src={onion}
+          alt="Onion" 
+          className="w-full h-full object-contain drop-shadow-lg"
+        />
+      </div>
+      <div className="absolute top-[35%] right-[5%] w-36 h-36 animate-float-delayed">
+        <img 
+          src={olive}
           alt="Olive" 
           className="w-full h-full object-contain drop-shadow-lg"
         />
       </div>
-      <div className="absolute top-[50%] left-[15%] w-28 h-28 animate-float-delayed">
+      <div className="absolute bottom-[35%] left-[10%] w-28 h-28 animate-float-delayed">
         <img 
-          src={pepperImg}
-          alt="Pepper" 
-          className="w-full h-full object-contain drop-shadow-lg"
-        />
-      </div>
-      <div className="absolute top-[40%] right-[12%] w-24 h-24 animate-float">
-        <img 
-          src={mushroomImg}
+          src={mushroom}
           alt="Mushroom" 
           className="w-full h-full object-contain drop-shadow-lg"
         />
       </div>
-      <div className="absolute top-[50%] right-8 w-20 h-20 animate-float-delayed">
+      <div className="absolute bottom-[28%] right-[7%] w-28 h-28 animate-float">
         <img 
-          src={garlicImg}
-          alt="Garlic" 
-          className="w-full h-full object-contain drop-shadow-lg"
-        />
-      </div>
-      <div className="absolute bottom-[30%] left-[8%] w-24 h-24 animate-float-delayed">
-        <img 
-          src={tomatoImg}
-          alt="Tomato" 
-          className="w-full h-full object-contain drop-shadow-lg"
-        />
-      </div>
-      <div className="absolute bottom-[25%] right-[8%] w-20 h-20 animate-float">
-        <img 
-          src={basilImg}
+          src={basil}
           alt="Basil" 
           className="w-full h-full object-contain drop-shadow-lg"
         />
       </div>
-      
-      {/* Hero Pizza Image */}
-      <div className="max-w-5xl mx-auto mt-12 px-4 relative z-20">
+      <div className="absolute top-[28%] left-[20%] w-24 h-24 animate-float">
         <img 
-          src={pizzaHeroImg}
-          alt="Delicious Pizza" 
-          className="w-full h-auto"
+          src={tomato}
+          alt="Tomato" 
+          className="w-full h-full object-contain drop-shadow-lg"
+        />
+      </div>
+      <div className="absolute top-[60%] right-[25%] w-26 h-26 animate-float-delayed">
+        <img 
+          src={greenPepper}
+          alt="Green Pepper" 
+          className="w-full h-full object-contain drop-shadow-lg"
+        />
+      </div>
+      <div className="absolute bottom-[45%] left-[25%] w-20 h-20 animate-float">
+        <img 
+          src={olive}
+          alt="Olive" 
+          className="w-full h-full object-contain drop-shadow-lg"
         />
       </div>
       

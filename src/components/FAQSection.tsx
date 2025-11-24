@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
+import { SectionHeader } from "./SectionHeader";
 
 export function FAQSection() {
   const faqs = [
@@ -59,31 +60,32 @@ export function FAQSection() {
 
   return (
     <section id="faq" className="py-20 bg-white">
+      <SectionHeader>Frequently Asked Questions</SectionHeader>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2>Frequently Asked Questions</h2>
-          <p className="text-gray-600 mt-4">Find answers to common questions about our pizzas and services</p>
+          <p className="text-gray-600" style={{ fontSize: '18px' }}>Find answers to common questions about our pizzas and services</p>
         </div>
 
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent className="text-gray-700">
+              <AccordionTrigger style={{ fontWeight: '600' }}>{faq.question}</AccordionTrigger>
+              <AccordionContent className="text-gray-700" style={{ fontSize: '15px' }}>
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
 
-        <div className="mt-12 text-center p-8 bg-gray-50 rounded-lg">
-          <h3 className="mb-4">Still have questions?</h3>
+        <div className="mt-12 text-center p-8 bg-gradient-to-br from-red-50 to-orange-50 rounded-lg shadow-md">
+          <h3 className="mb-4" style={{ color: '#C8102E', fontWeight: '700' }}>Still have questions?</h3>
           <p className="text-gray-600 mb-6">
             Don't hesitate to reach out! Our team is happy to help.
           </p>
           <a 
             href="tel:5592715151" 
-            className="inline-block bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition-colors"
+            className="inline-block bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition-colors shadow-md"
+            style={{ fontWeight: '700' }}
           >
             Call Us: (559) 271-5151
           </a>

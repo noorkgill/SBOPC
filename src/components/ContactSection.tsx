@@ -1,17 +1,18 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Phone, MapPin, Clock, Mail, Star } from "lucide-react";
+import { SectionHeader } from "./SectionHeader";
 
 export function ContactSection() {
   return (
     <section id="contact" className="py-20 bg-gray-50">
+      <SectionHeader>Contact Us & Hours</SectionHeader>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2>Contact Us</h2>
-          <p className="text-gray-600 mt-4">We'd love to hear from you!</p>
+          <p className="text-gray-600" style={{ fontSize: '18px' }}>We'd love to hear from you!</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-xl transition-shadow">
             <CardHeader>
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
@@ -20,14 +21,14 @@ export function ContactSection() {
               </div>
               <CardTitle>Phone</CardTitle>
               <CardContent className="pt-4">
-                <a href="tel:5592715151" className="text-red-600 hover:underline">
+                <a href="tel:5592715151" className="text-red-600 hover:underline" style={{ fontWeight: '600' }}>
                   (559) 271-5151
                 </a>
               </CardContent>
             </CardHeader>
           </Card>
 
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-xl transition-shadow">
             <CardHeader>
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
@@ -44,7 +45,7 @@ export function ContactSection() {
             </CardHeader>
           </Card>
 
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-xl transition-shadow">
             <CardHeader>
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
@@ -61,7 +62,7 @@ export function ContactSection() {
             </CardHeader>
           </Card>
 
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-xl transition-shadow">
             <CardHeader>
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
@@ -70,7 +71,7 @@ export function ContactSection() {
               </div>
               <CardTitle>Email</CardTitle>
               <CardContent className="pt-4">
-                <a href="mailto:info@pizzadelicious.com" className="text-red-600 hover:underline">
+                <a href="mailto:info@pizzadelicious.com" className="text-red-600 hover:underline" style={{ fontWeight: '600' }}>
                   info@pizzadelicious.com
                 </a>
               </CardContent>
@@ -79,7 +80,7 @@ export function ContactSection() {
         </div>
 
         <div className="mb-12 text-center">
-          <Card className="max-w-md mx-auto hover:shadow-lg transition-shadow">
+          <Card className="max-w-md mx-auto hover:shadow-xl transition-shadow bg-gradient-to-br from-yellow-50 to-orange-50">
             <CardHeader>
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center">
@@ -95,7 +96,8 @@ export function ContactSection() {
                   href="https://www.google.com/search?sca_esv=c01e032babacf42f&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EzTxkrKDPMqSuDHNRtB5ABGrUmVw3XC1t-PjacQrgmIJKhimysgc3JgldtzchA9R_IzOfPYilNOKA0nc_l3Pp0YbwlSr&q=Pizza+Delicious+Reviews&sa=X&ved=2ahUKEwiR0pbk6IeRAxUYDDQIHb26OmEQ0bkNegQIKBAD&biw=1411&bih=702&dpr=1.8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition-colors"
+                  className="inline-block bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition-colors shadow-md"
+                  style={{ fontWeight: '700' }}
                 >
                   Write a Google Review
                 </a>
@@ -104,12 +106,12 @@ export function ContactSection() {
           </Card>
         </div>
 
-        <Card className="max-w-4xl mx-auto">
+        <Card className="max-w-4xl mx-auto hover:shadow-xl transition-shadow">
           <CardHeader>
-            <CardTitle>Visit Us</CardTitle>
+            <CardTitle style={{ color: '#C8102E', fontWeight: '700' }}>Visit Us</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
+            <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-inner">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.7707876!2d-119.8!3d36.81!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDQ4JzM2LjAiTiAxMTnCsDQ4JzAwLjAiVw!5e0!3m2!1sen!2sus!4v1234567890"
                 width="100%"
@@ -121,9 +123,9 @@ export function ContactSection() {
                 title="Pizza Delicious Location"
               ></iframe>
             </div>
-            <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <div className="mt-6 p-4 bg-green-50 border-2 border-green-200 rounded-lg">
               <p className="text-gray-700">
-                <strong>Getting Here:</strong> We're located on West Shaw Avenue in Fresno. 
+                <strong style={{ color: '#6B9F4A' }}>Getting Here:</strong> We're located on West Shaw Avenue in Fresno. 
                 Plenty of parking available. Dine-in, takeout, and delivery options available!
               </p>
             </div>

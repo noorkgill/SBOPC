@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { SectionHeader } from "./SectionHeader";
 
 export function MenuSection() {
   const [selectedSize, setSelectedSize] = useState<"10" | "12" | "14" | "18">("12");
@@ -121,10 +122,10 @@ export function MenuSection() {
 
   return (
     <section id="menu" className="py-20 bg-white">
+      <SectionHeader>Our Menu</SectionHeader>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2>Our Menu</h2>
-          <p className="text-gray-600 mt-4">From classic combinations to bold Indian flavors, we have something for everyone.</p>
+          <p className="text-gray-600">From classic combinations to bold Indian flavors, we have something for everyone.</p>
         </div>
 
         <Tabs defaultValue="traditional" className="w-full">
@@ -171,12 +172,12 @@ export function MenuSection() {
               {traditionalPizzas.map((pizza) => (
                 <Card key={pizza.name} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <CardTitle>{pizza.name}</CardTitle>
+                    <CardTitle style={{ fontWeight: '700' }}>{pizza.name}</CardTitle>
                     <CardDescription>{pizza.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex justify-between items-center">
-                      <span className="text-green-700">{pizza.prices[selectedSize]}</span>
+                      <span className="text-green-700" style={{ fontWeight: '600' }}>{pizza.prices[selectedSize]}</span>
                     </div>
                   </CardContent>
                 </Card>
@@ -247,12 +248,12 @@ export function MenuSection() {
               {indianPizzas.map((pizza) => (
                 <Card key={pizza.name} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <CardTitle>{pizza.name}</CardTitle>
+                    <CardTitle style={{ fontWeight: '700' }}>{pizza.name}</CardTitle>
                     <CardDescription>{pizza.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex justify-between items-center">
-                      <span className="text-green-700">{pizza.prices[selectedSize]}</span>
+                      <span className="text-green-700" style={{ fontWeight: '600' }}>{pizza.prices[selectedSize]}</span>
                     </div>
                   </CardContent>
                 </Card>
